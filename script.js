@@ -12,4 +12,13 @@ var guessList = ["aahed", "aalii", "aargh", "aarti", "abaca", "abaci", "abacs", 
 
 guessList = guessList.concat(wordList);
 
+// Cogemos una palabra aleatoria de la lista para adivinar y la ponemos en mayúsculas
+var word = wordList[Math.floor(Math.random()*wordList.length)].toUpperCase();
+console.log(word);
+
+// cuando la pagina cargue se inicializa el juego
+window.onload = function(){
+    initialize();
+}
+
 
