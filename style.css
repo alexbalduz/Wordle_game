@@ -21,3 +21,37 @@ hr {
     display: flex;
     flex-wrap: wrap;
 }
+
+.baldosas {
+    /* Box */
+    border: 2px solid lightgray;
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    /* Text */
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correcto {
+    background-color: #6AAA64;
+    color: white;
+    border-color: white;
+}
+
+.presente {
+    background-color: #C9B458;
+    color: white;
+    border-color: white;
+}
+
+.ausente {
+    background-color: #787C7E;
+    color: white;
+    border-color:white;
+}
