@@ -76,6 +76,51 @@ function initialize() {
         document.body.appendChild(tecladoFila);
     }
 
-
+    // Evento para pulsar la tecla
+    document.addEventListener("keyup", (e) => {
+        processInput(e);
+    })
 }
+
+// El objetivo de la función es crear un objeto simulado de evento y pasar este objeto a otra función llamada processInput
+function processKey() {
+    e = { "code" : this.id };
+    processInput(e);
+}
+
+// Controla la entrada de las teclas, permite ingresar letras en las baldosas correspondientes, retroceder para borrar letras y realiza acciones específicas cuando se presionan teclas especiales como "Enter". También verifica si se cumple una condición de finalización del juego y realiza acciones adicionales en ese caso.
+function processInput(e) {
+    if (gameOver) return;
+
+    // alert(e.code);
+    if ("KeyA" <= e.code && e.code <= "KeyZ") {
+        if (col < anchura) {
+            let baldosaActual = document.getElementById(fila.toString() + '-' + col.toString());
+            if (baldosaActual.innerText == "") {
+                baldosaActual.innerText = e.code[3];
+                col += 1;
+            }
+        }
+    }
+    else if (e.code == "Backspace") {
+        if (0 < col && col <= anchura) {
+            col -=1;
+        }
+        let baldosaActual = document.getElementById(fila.toString() + '-' + col.toString());
+        baldosaActual.innerText = "";
+    }
+
+    else if (e.code == "Enter") {
+        actualizar();
+    }
+
+    if (!gameOver && fila == altura) {
+        gameOver = true;
+        document.getElementById("answer").innerText = word;
+    }
+}
+
+
+
+
 
