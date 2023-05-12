@@ -6,13 +6,10 @@ body {
 	background: #f2f2f2;
 	font-size: 1em;
 	line-height: 1.5em;
-	text-align: center;
+	text-align: justify;
 	padding-top: 80px;
 }
 
-hr {
-    width: 500px;
-}
 
 #title {
     font-size: 36px;
@@ -108,8 +105,6 @@ hr {
 	border-radius: 5px;
 	text-decoration: none;
 	font-size: 1.2em;
-	position: absolute;
-	bottom: 40px;
 }
 
 
@@ -153,7 +148,7 @@ h3 {
  */
 #logo-header {
 	float: left;
-	padding: 15px 0 0 125px;
+	padding: 15px 0 0 155px;
 	text-decoration: none;
     text-transform: uppercase;
 }
@@ -177,7 +172,7 @@ nav {
 nav ul {
 	margin: 0;
 	padding: 0;
-	padding-right: 20px;
+	padding-right: 40px;
 }
 
 nav ul li {
@@ -204,6 +199,7 @@ nav ul li a:hover {
 //------------------------------
 ************/
 #main-content {
+	background-color: azure;
 	width: 90%;
 	max-width: 800px;
 	margin: 20px;
