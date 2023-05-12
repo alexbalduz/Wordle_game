@@ -22,7 +22,7 @@ hr {
     flex-wrap: wrap;
 }
 
-.baldosas {
+.baldosa {
     /* Box */
     border: 2px solid lightgray;
     width: 60px;
@@ -54,4 +54,40 @@ hr {
     background-color: #787C7E;
     color: white;
     border-color:white;
+}
+
+.teclado-fila {
+    width: 400px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.key-baldosa {
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enter-key-baldosa {
+    width: 76px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
