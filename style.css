@@ -97,6 +97,12 @@ body {
     align-items: center;
 }
 
+#img1 {
+	max-width: 50%;
+	margin: 0 auto;
+	display: block;
+}
+
 #img3 {
 	max-width: 65%;
 	height: auto;
@@ -114,7 +120,7 @@ body {
 
 
 .btn {
-	background-color: rgb(129, 67, 67);
+	background-color: rgb(59, 209, 96);
 	color: white;
 	padding: 10px 20px;
 	border: none;
@@ -215,7 +221,7 @@ nav ul li a:hover {
 //------------------------------
 ************/
 #main-content {
-	background-color: azure;
+	background-color: white;
 	width: 90%;
 	max-width: 800px;
 	margin: 20px;

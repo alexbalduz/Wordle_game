@@ -116,7 +116,9 @@ function processInput(e) {
 
     if (!gameOver && fila == altura) {
         gameOver = true;
-        document.getElementById("answer").innerText = word;
+        setTimeout(function() {
+            document.getElementById("answer").innerText = word;
+        }, 500);
     }
 }
 
@@ -136,7 +138,9 @@ function actualizar() {
     console.log(guess);
 
     if (!guessList.includes(guess)) {
-        document.getElementById("answer").innerText = "No está en la lista";
+        setTimeout(function() {
+            document.getElementById("answer").innerText = "No está en la lista";
+        }, 500);
         return;
     }
 
