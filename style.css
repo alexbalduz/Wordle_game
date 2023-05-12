@@ -15,6 +15,7 @@ body {
     font-size: 36px;
     font-weight: bold;
     letter-spacing: 2px;
+	text-align: center;
 }
 
 #board {
@@ -61,7 +62,7 @@ body {
 }
 
 .teclado-fila {
-    width: 400px;
+    width: 380px;
 
     margin: 0 auto;
     display: flex;
@@ -69,7 +70,7 @@ body {
 }
 
 .key-baldosa {
-    width: 36px;
+    width: 34px;
     height: 40px;
     margin: 1px;
     border: 1px solid lightgray;
@@ -83,7 +84,7 @@ body {
 }
 
 .enter-key-baldosa {
-    width: 76px;
+    width: 72px;
     height: 40px;
     margin: 1px;
     border: 1px solid lightgray;
@@ -108,7 +109,7 @@ body {
 }
 
 
-h2 {
+h1 {
 	font-size: 1.8em;
 	line-height: 1.3em;
 	margin: 15px 0;
@@ -225,6 +226,27 @@ nav ul li a:hover {
 
 #main-footer p {
 	margin: 0;
+}
+
+#footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+}
+#footer p {
+	margin: 0;
+}
+
+#wordle-footer {
+	position: fixed;
+	width: 100%;
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	bottom: 0;
 }
 
 /*Media Queries*/
