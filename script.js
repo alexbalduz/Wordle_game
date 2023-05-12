@@ -121,6 +121,92 @@ function processInput(e) {
 }
 
 
+function actualizar() {
+    let guess = "";
+    document.getElementById("answer").innerText = "";
 
+    //encadena intentos en la palabra
+    for (let c = 0; c < anchura; c++) {
+        let baldosaActual = document.getElementById(fila.toString() + '-' + c.toString());
+        let letra = baldosaActual.innerText;
+        guess += letra;
+    }
 
+    guess = guess.toLowerCase(); //case sensitive
+    console.log(guess);
+
+    if (!guessList.includes(guess)) {
+        document.getElementById("answer").innerText = "No está en la wordlist";
+        return;
+    }
+
+    //empieza proceso de adivinar
+    let correcto = 0;
+
+    let letrasCount = {}; //realiza un seguimiento de la frecuencia de letra, por ejemplo: ABAJO -> {A: 2, B: 1, J: 1, O: 1}
+    for (let i = 0; i < word.length; i++) {
+        let letra = word[i];
+
+        if (letrasCount[letra]) {
+            letrasCount[letra] += 1;
+        }
+        else {
+            letrasCount[letra] = 1;
+        }
+    }
+
+    console.log(letrasCount);
+
+    //Primera iteración, comprueba todas las correctas primero
+    for (let c = 0; c < anchura; c++) {
+        let baldosaActual = document.getElementById(fila.toString() + '-' + c.toString());
+        let letra = baldosaActual.innerText;
+
+        // Verifica si están en la posición correcta
+        if (word[c] == letra) {
+            baldosaActual.classList.add("correcto");
+
+            let keyBaldosa = document.getElementById("Key" + letra);
+            keyBaldosa.classList.remove("presente");
+            keyBaldosa.classList.add("correcto");
+
+            correcto += 1;
+            letrasCount[letra] -= 1; //reduce el conteo de letras
+        }
+
+        if (correcto == anchura) {
+            gameOver = true;
+        }
+    }
+
+    console.log(letrasCount);
+
+    //marcar cuáles están presentes pero en posición incorrecta
+    for (let c = 0; c < anchura; c++) {
+        let baldosaActual = document.getElementById(fila.toString() + '-' + c.toString());
+        let letra = baldosaActual.innerText;
+
+        // saltar la letra si se ha marcado como correcta
+        if (!baldosaActual.classList.contains("correcto")) {
+            //nos aseguramos que no cuenta doble
+            if (word.includes(letra) && letrasCount[letra] > 0) {
+                baldosaActual.classList.add("presente");
+
+                let keyBaldosa = document.getElementById("Key" + letra);
+                if (!keyBaldosa.classList.contains("correcto")) {
+                    keyBaldosa.classList.add("presente");
+                }
+                letrasCount[letra] -= 1;
+            } // No está en la palabra o estaba en la palabra pero las letras se agotaron para evitar el conteo excesivo
+            else {
+                baldosaActual.classList.add("ausente");
+                let keyBaldosa = document.getElementById("Key" + letra);
+                keyBaldosa.classList.add("ausente")
+            }
+        }
+    }
+
+    fila += 1; //empieza nueva fila
+    col = 0; //empieza en 0 por la nueva fila
+}
 
