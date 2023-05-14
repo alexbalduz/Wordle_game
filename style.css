@@ -103,6 +103,12 @@ body {
 	display: block;
 }
 
+#img2 {
+	max-width: 50%;
+	margin: 0 auto;
+	display: block;
+}
+
 #img3 {
 	max-width: 65%;
 	height: auto;
@@ -321,6 +327,10 @@ nav ul li a:hover {
 		max-width: 40%;
 		height: auto;
 	}
+	#img2 {
+		max-width: 28%;
+		height: auto;
+	}
 }
 
 /*Large (desktop)*/
@@ -351,6 +361,10 @@ nav ul li a:hover {
 	}
 	#img3 {
 		max-width: 40%;
+		height: auto;
+	}
+	#img2 {
+		max-width: 28%;
 		height: auto;
 	}
 

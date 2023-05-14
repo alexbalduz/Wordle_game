@@ -76,7 +76,7 @@ function initialize() {
     // Evento para pulsar la tecla
     document.addEventListener("keyup", (e) => {
         processInput(e);
-    })
+    });
 }
 
 // El objetivo de la función es crear un objeto simulado de evento y pasar este objeto a otra función llamada processInput
@@ -177,10 +177,14 @@ function actualizar() {
 
         if (correcto == anchura) {
             gameOver = true;
+            setTimeout(function() {
+                alert("¡Enhorabuena! Has acertado la palabra en " + fila + " intentos");
+            }, 500);
         }
     }
 
     console.log(letrasCount);
+
 
     //marcar cuáles están presentes pero en posición incorrecta
     for (let c = 0; c < anchura; c++) {
