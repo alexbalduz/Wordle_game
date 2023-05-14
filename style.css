@@ -127,6 +127,18 @@ body {
 .bold {
 	font-weight: bold;
 }
+
+.verde {
+	color: rgb(59, 209, 96);
+}
+
+.amarillo {
+	color: rgb(212, 212, 6);
+}
+
+.gris {
+	color: rgb(128, 128, 128);
+}
 .btn {
 	background-color: rgb(59, 209, 96);
 	color: white;
