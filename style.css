@@ -118,7 +118,9 @@ body {
 	float: left;
 }
 
-
+.bold {
+	font-weight: bold;
+}
 .btn {
 	background-color: rgb(59, 209, 96);
 	color: white;

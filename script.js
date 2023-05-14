@@ -114,7 +114,7 @@ function processInput(e) {
     if (!gameOver && fila == altura) {
         gameOver = true;
         setTimeout(function() {
-            document.getElementById("answer").innerText = word;
+            alert(document.getElementById("answer").innerText = "La palabra era: " + word);
         }, 500);
     }
 }
@@ -136,7 +136,7 @@ function actualizar() {
 
     if (!wordList.includes(guess)) {
         setTimeout(function() {
-            document.getElementById("answer").innerText = "No está en la lista";
+            alert(document.getElementById("answer").innerText = "No está en la lista");
         }, 500);
         return;
     }
