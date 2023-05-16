@@ -198,8 +198,16 @@ function actualizar() {
                 }
             }, 1000);
         }
+    }
 
-        // Verifica si la letra está en la palabra pero no en la posición correcta, ausente o presente
+    console.log(letrasCount);
+
+
+    //marcar cuáles están presentes pero en posición incorrecta y cuáles están ausentes
+    for (let c = 0; c < anchura; c++) {
+        let baldosaActual = document.getElementById(fila.toString() + '-' + c.toString());
+        let letra = baldosaActual.innerText;
+
         // saltar la letra si se ha marcado como correcta
         if (!baldosaActual.classList.contains("correcto")) {
             //nos aseguramos que no cuenta doble
@@ -219,8 +227,6 @@ function actualizar() {
             }
         }
     }
-
-    console.log(letrasCount);
 
     fila += 1; //empieza nueva fila
     col = 0; //empieza en 0 por la nueva fila
